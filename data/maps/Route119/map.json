@@ -846,7 +846,7 @@
       "x": 17,
       "y": 82,
       "elevation": 3,
-      "item": "ITEM_CALCIUM",
+      "item": "ITEM_PINSIRITE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM"
     },
     {
@@ -854,7 +854,7 @@
       "x": 38,
       "y": 63,
       "elevation": 3,
-      "item": "ITEM_ULTRA_BALL",
+      "item": "ITEM_SCEPTILITE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL"
     },
     {

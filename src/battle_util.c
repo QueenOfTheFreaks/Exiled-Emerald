@@ -4223,7 +4223,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     if (timerVal == 0)
                         gSideTimers[B_SIDE_PLAYER].tailwindTimer = 0; // infinite
                     else
-                        gSideTimers[B_SIDE_PLAYER].tailwindTimer = 5;
+                        gSideTimers[B_SIDE_PLAYER].tailwindTimer = 6;
                     effect = 1;
                 }
                 break;
@@ -4237,7 +4237,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     if (timerVal == 0)
                         gSideTimers[B_SIDE_OPPONENT].tailwindTimer = 0; // infinite
                     else
-                        gSideTimers[B_SIDE_OPPONENT].tailwindTimer = 5;
+                        gSideTimers[B_SIDE_OPPONENT].tailwindTimer = 6;
                     effect = 1;
                 }
                 break;
@@ -5967,6 +5967,21 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_GLACIAL_TOXINS:
+		    if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+			 && (!gBattleStruct->isSkyBattle)
+			 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+			 && IS_MOVE_PHYSICAL(gCurrentMove)
+			 && TARGET_TURN_DAMAGED
+			 && (gSideTimers[GetBattlerSide(gBattlerAttacker)].toxicSpikesAmount != 2))
+		    {
+			    SWAP(gBattlerAttacker, gBattlerTarget, i);
+			    BattleScriptPushCursor();
+			    gBattlescriptCurrInstr = BattleScript_ToxicDebrisActivates;
+			    effect++;
+		    }
+		break;
+    
         }
         break;
     case ABILITYEFFECT_MOVE_END_ATTACKER: // Same as above, but for attacker
@@ -10032,6 +10047,11 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
         if (IS_MOVE_SPECIAL(move))
             return UQ_4_12(0.5);
         break;
+    case ABILITY_GLACIAL_TOXINS:
+        if (!IsMoveMakingContact(move, battlerAtk) && moveType == TYPE_FIRE)
+            return UQ_4_12(2.0);
+        if (IsMoveMakingContact(move, battlerAtk) && moveType != TYPE_FIRE)
+            return UQ_4_12(0.5);
     }
     return UQ_4_12(1.0);
 }

@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -284,6 +284,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NewMauville_Inside_EventScript_Generator"
+    },
+    {
+      "type": "hidden_item",
+      "x": 27,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_AMPHAROSITE",
+      "flag": "FLAG_TEMP_2"
     }
   ]
 }

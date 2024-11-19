@@ -505,7 +505,7 @@
       "x": 23,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_HP_UP",
+      "item": "ITEM_HERACRONITE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_121_HP_UP"
     },
     {

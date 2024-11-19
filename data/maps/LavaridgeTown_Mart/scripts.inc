@@ -22,6 +22,8 @@ LavaridgeTown_Mart_Pokemart:
 	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_X_SPEED
+	.2byte ITEM_ROCK_GEM
+	.2byte ITEM_LIFE_ORB
 	.2byte ITEM_NONE
 	release
 	end

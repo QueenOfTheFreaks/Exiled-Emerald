@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
@@ -435,7 +435,9 @@
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -452,6 +454,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MtChimney_EventScript_RouteSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_LUCARIONITE",
+      "flag": "FLAG_TEMP_B"
     }
   ]
 }

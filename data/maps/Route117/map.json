@@ -373,7 +373,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -401,10 +403,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 3,
-      "y": 18,
+      "x": 12,
+      "y": 15,
       "elevation": 3,
-      "item": "ITEM_REPEL",
+      "item": "ITEM_GARDEVOIRITE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_REPEL"
     }
   ]

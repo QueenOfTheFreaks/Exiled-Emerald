@@ -129,7 +129,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -194,6 +196,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VerdanturfTown_EventScript_RusturfTunnelSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "item": "ITEM_GALLADITE",
+      "flag": "FLAG_TEMP_8"
     }
   ]
 }

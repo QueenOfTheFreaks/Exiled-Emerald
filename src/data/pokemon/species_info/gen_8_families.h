@@ -4749,13 +4749,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_FALINKS
     [SPECIES_FALINKS] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 100,
-        .baseDefense   = 100,
+        .baseHP        = 75,
+        .baseAttack    = 115,
+        .baseDefense   = 109,
         .baseSpeed     = 75,
         .baseSpAttack  = 70,
-        .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .baseSpDefense = 85,
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_BUG),
         .catchRate = 45,
         .expYield = 165,
         .evYield_Attack = 2,
@@ -4930,7 +4930,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSnomLevelUpLearnset,
         .teachableLearnset = sSnomTeachableLearnset,
         .eggMoveLearnset = sSnomEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP_NIGHT, 0, SPECIES_FROSMOTH}),
+        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_FROSMOTH}),
     },
 
     [SPECIES_FROSMOTH] =

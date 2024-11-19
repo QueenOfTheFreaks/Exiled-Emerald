@@ -28,6 +28,7 @@ RustboroCity_Mart_Pokemart_Basic:
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_NONE
 	release
 	end
@@ -52,6 +53,7 @@ RustboroCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_MUSCLE_BAND
 	.2byte ITEM_NONE
 	release
 	end

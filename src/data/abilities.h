@@ -2608,4 +2608,18 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_GLACIAL_TOXINS] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Glacial Toxins"),
+    #else
+        .name = _("GlacialToxins"),
+    #endif
+        .description = COMPOUND_STRING("Fluffy + Toxic Debris."),
+        .aiRating = 8,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+    }
 };
